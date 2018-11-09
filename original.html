@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<div class="main-form-container">
+		<div class="graphic">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 form-border">
+						<div class="form">
+							<div class="spinner-wrap col-12 m-tb-3em hidden">
+								<div class="spinner"><span></span><span></span><span></span></div>
+								<h6 class="text-center">Bearbeider søknad ...</h6>
+							</div>
+							<div class="success hidden">
+								<p class="h2">Takk for din lånesøknad!</p>
+								<p class="h4">Den har nå blitt sendt til over 11 banker som kommer til å legge sine beste låneforslag innen 3 timer.</p>
+								<p class="h6">Hva skjer nå?</p>
+								<ol class="steps"></ol>
+								<p><strong>VIKTIG!</strong> For at din kredittverdighet og låneforslagene ikke skal forverres anbefaler vi at du ikke søker lån hos andre banker/låneformidlingsforetak før du får beskjed fra oss.</p>
+								<p>Vi har fått 9,4 av 10 i omtaler fra tusenvis av fornøyde kunder. Under finner du et utvalg fra våre nyeste kunder.</p>
+								<div class="trustpilot-widget" data-locale="nb-NO" data-template-id="54ad5defc6454f065c28af8b" data-businessunit-id="5818b0250000ff000596e1d5" data-style-height="220px" data-style-width="100%" data-theme="light" data-stars="5" style="position: relative;"></div>
+							</div>
+							<div class="form-content">
+								<div class="row">
+									<div class="col-12">
+										<h2 class="text-center form-header">Søk og få flere lånetilbud <span class="underline"></span> </h2>
+										<!--<hr>-->
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6 col-sm-12 total-loan-wrap"><label class="loan-label">Totalt lånebeløp:</label>
+										<div class="input-group">
+											<div class="person-new-loan-wrap"><input class="x-new-loan form-control text-center" type="tel" placeholder="150 000 kr" min="5000" max="500000" name="newloanAmount">
+												<div class="form-control-feedback new-loan-warning"></div>
+											</div>
+										</div>
+										<div class="input-group slider-wrap"><input class="range-slider-new" type="range" value="100000" min="0" max="500000" step="5000"></div>
+										<div class="slider-lbl"><span class="left-lbl" style="font-size: 0.6em">0</span><span class="right-lbl" id="new-range-slider-label" style="font-size: 0.6em; position: absolute; right: 0">500 000 kr   </span></div>
+									</div>
+									<div class="col-lg-6 col-sm-12 loan-time-wrap"><label class="loan-label">Nedbetalingstid:</label>
+										<div class="input-group"><span class="input-group-btn"><button class="btn btn-secondary" id="repayment-decrease" type="button" style="padding: 0.5rem 1.2rem;">-</button></span><input class="form-control text-center x-repayment-time" type="tel" value="5" name="repaymentTime"><span class="input-group-btn"><button class="btn btn-secondary" id="repayment-increase" type="button" style="padding: 0.5rem 1.2rem;">+</button></span></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12"><label class="loan-label m-tb-lem text-left" style="margin-bottom: 0.1em">Vill du refinansiere/samle gjeld?</label></div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="toggle-loan-btn-wrap btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%; margin-top: 0.1em"><label class="btn btn-secondary btn-secondary-noborder btn-secondary-ja btn-secondary-nobg oldLoanBtn" style="width: 50%; border-radius: 5px 0px 0px 5px;cursor: pointer"><input class="custom-control-input" type="radio" name="toggleNewLoan" id="newLoanRadio" autocomplete="off"><span>Ja</span><span class="checkmrk"></span></label><label class="btn btn-secondary btn-secondary-noborder btn-secondary-nei btn-secondary-nobg newLoanBtn active" style="width: 50%; border-radius: 0px 5px 5px 0px;cursor: pointer"><input class="custom-control-input" type="radio" name="toggleNewLoan" id="refinanceRadio" autocomplete="off" checked=""><span>Nei</span><span class="checkmrk"></span></label></div>
+										<span class="underline underline_short"></span>
+									</div>
+								</div>
+								<div class="row old-loan-wrap hidden">
+									<div class="col-lg-12 col-12"><label class="loan-label m-tb-1em">Av totalt lånebeløp, hvor mye skal gå til å refinansiere/samle lån</label>
+										<div class="group person-old-loan-wrap"><input class="form-control x-old-loan text-center" type="tel" placeholder="150 000 kr" name="oldLoanAmount">
+											<div class="form-control-feedback person-old-loan-feedback"> </div>
+										</div>
+										<div class="input-group slider-wrap"><input class="range-slider-old" type="range" value="100000" min="0" max="500000" step="5000"></div>
+										<div style="position: relative; margin-bottom: 1em"> <span style="font-size: 0.6em; position: absolute; bottom: -8px; left: 0">0 </span><span id="old-range-slider-label" style="font-size: 0.6em; position: absolute; bottom: -8px; right: 0">150 000 kr </span></div>
+										<div class="bg">
+											<div class="group old-loan-repayment-wrap" style="width:90%"><select class="custom-select" name="oldLoanRepaymentTime"><option selected="" value="-">Nedbetalingstid på nåværende lån</option><option value="12">1 år</option><option value="24">2 år</option><option value="36">3 år</option><option value="48">4 år</option><option value="60">5 år</option><option value="72">6 år</option><option value="84">7 år</option><option value="96">8 år</option><option value="108">9 år</option><option value="120">10 år</option><option value="132">11 år</option><option value="144">12 år</option><option value="156">13 år</option><option value="168">14 år</option><option value="180">15 år</option></select><span></span>
+												<div class="form-control-feedback old-loan-repayment-feedback"> </div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<p class="text-center text-bigger">Kostnad: <strong class="monthly-cost">2 967 kr/mån*</strong> <span class="underline"></span> </p>
+										<!--<hr>-->
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<h5>Informasjon om deg</h5>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-id-number-wrap"><input class="form-control" type="text" name="personSSN" inputmode="numeric" pattern="[0-9]*" min="0" required=""><label class="mat-lbl">Fødselsnummer</label>
+											<div class="form-control-feedback person-id-number-feedback"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-phone-wrap"><input class="form-control" type="tel" name="personTel" maxlength="10" required=""><label class="mat-lbl">Mobilnummer</label>
+											<div class="form-control-feedback person-phone-feedback"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-email-wrap"><input class="form-control" type="email" name="personEmail" required=""><label class="mat-lbl">E-post</label>
+											<div class="form-control-feedback person-email-feedback"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-education-status-wrap"><select class="custom-select" name="personEducation"><option selected="" value="-">Utdannelse</option><option value="primarySchool">Grunnskole</option><option value="secondarySchool">Videregående</option><option value="universityShort">Videregående / universitet i 3 år</option><option value="universityLong">Videregående / Universitet i mer enn 3 år</option></select><span></span>
+											<div class="form-control-feedback person-education-status-feedback"> </div>
+										</div>
+									</div>
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-child-wrap"><select class="custom-select" name="personChildAmount"><option selected="" value="-">Antall barn</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select><span></span>
+											<div class="form-control-feedback person-child-feedback"> </div>
+										</div>
+									</div>
+									<div class="col-md-4 col-12 input-padding">
+										<div class="group person-civil-status-wrap"><select class="custom-select" name="personCivilStatus"><option selected="" value="-">Sivilstatus</option><option value="married">Gift</option><option value="single">Enslig/Singel</option><option value="partner">Samboer</option></select><span></span>
+											<div class="form-control-feedback person-civil-status-feedback"> </div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<h5>Informasjon om husholdingen</h5>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 input-padding">
+										<div class="group person-work-status-wrap"><select class="custom-select" name="personWorkStatus"><option value="-" selected="">Arbeidsforhold</option><option value="employedPrivate">Fast ansatt (privat sektor)</option><option value="employedState">Fast ansatt (offentlig sektor)</option><option value="selfemployed">Selvstendig næringsdrivende</option><option value="hourlyEmployment">Time ansatt</option><option value="student">Student</option><option value="retired">Pensjonist</option><option value="disability">Uføretrygdet</option><option value="rehabilitation">Attføring/AAP/rehabilitering</option><option value="unemployed">Arbeidsledig</option></select><span></span>
+											<div class="form-control-feedback person-work-status-feedback"> </div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="person-dropdown-wrap zero-height" style="margin: 0.65em auto 0;">
+											<div class="row bg person-employment-dropdown hide" style="margin:0 0 1em 0">
+												<div class="col-12">
+													<div class="group person-employer-wrap"><input class="form-control" type="text" name="personEmployer" required=""><label class="mat-lbl">Arbeidsgiver</label>
+														<div class="form-control-feedback person-employer-feedback"></div>
+													</div>
+												</div>
+												<div class="row person-employed-since-wrap" style="width:100%"><label>Arbeidet siden</label>
+													<div class="col-lg-6 col-md-12 person-employed-since-year p-right"><select class="custom-select" name="personEmploymentYear"><option selected="" value="-">År</option><option value="2014">Tidligere</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option></select><span style="right: 25px; top: 9px"></span>
+														<div class="form-control-feedback person-employed-since-year-feedback"> </div>
+													</div>
+													<div class="col-lg-6 col-md-12 person-employed-since-month p-left"><select class="custom-select" name="personEmploymentMonth"><option selected="" value="-">Mån</option><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">Mai</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9">Okt</option><option value="10">Nov</option><option value="11">Des</option></select><span style="right: 25px; top: 9px"></span></div>
+													<div class="form-control-feedback person-employed-since-month-feedback"></div>
+												</div>
+												<div class="col-12">
+													<div class="group person-yearly-income-wrap"><input class="form-control" name="personYearlyIncome" type="number" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Årsinntekt før skatt</label>
+														<div class="form-control-feedback person-yearly-income-feedback"> </div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="group person-monthly-income-wrap"><input class="form-control" name="personMonthlyIncome" type="number" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Månedsinntekt etter skatt</label>
+														<div class="form-control-feedback person-monthly-income-feedback"> </div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="group person-partner-income-wrap hide"><input class="form-control" type="number" name="personPartnerIncome" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Samboers årsinntekt brutto</label>
+														<div class="form-control-feedback person-partner-income-feedback"> </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 input-padding">
+										<div class="person-home-status-wrap"><select class="custom-select" name="personHomeStatus" style="margin-bottom: 0.5em;"><option selected="" value="-">Boligstatus</option><option value="rented">Leietaker</option><option value="house">Eier egen bolig</option><option value="roommate">Foreldrer / Leier rom</option></select><span style="right: 17px;"></span>
+											<div class="form-control-feedback person-home-status"> </div>
+										</div>
+									</div>
+									<div class="col-12 person-home-status-dropdown hide" style="padding-left:5px">
+										<div class="bg-home-status-dropdown">
+											<div class="col-12">
+												<div class="group person-home-cost-wrap"><input class="form-control" type="number" name="personHousingCost" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Boendekost/mån</label>
+													<div class="form-control-feedback person-home-cost-feedback"> </div>
+												</div>
+												<div class="group person-mortgage-wrap"><input class="form-control" type="text" name="personMortgage" inputmode="numeric" pattern="[0-9 ]*" required=""><label class="mat-lbl">Totalt boliglån</label>
+													<div class="form-control-feedback person-mortgage-feedback"> </div>
+												</div>
+												<div class="group">
+													<div class="person-mortgage-percentage-wrap hide"><select class="custom-select" name="personMortgagePercentage"><option selected="" value="-">Din del av totalt boliglån %</option><option value="0">0% - Jeg står ikke på boliglånet</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option><option value="90">90%</option><option value="100">100%</option></select><span></span></div>
+													<div class="form-control-feedback person-mortgage-percentage-feedback"> </div>
+												</div>
+												<div class="group person-rental-income-wrap"><input class="form-control" type="number" name="personRentalIncome" pattern="[0-9]*" required=""><label class="mat-lbl">Månedlig leieinntekt</label>
+													<div class="form-control-feedback person-rental-income-feedback"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<h5>Nåværende gjelder (inkluder all gjeld)</h5>
+									</div>
+									<div class="col-md-6 col-12 input-padding" style="margin-bottom: 0.5em;">
+										<div class="group person-car-debt-wrap"><input class="form-control" type="text" name="personCarDebt" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Total bil/båt/MC gjeld (kr)</label>
+											<div class="form-control-feedback person-car-debt-feedback"> </div>
+										</div>
+									</div>
+									<div class="col-md-6 col-12 input-padding" style="margin-bottom: 0.5em;">
+										<div class="group person-other-debt-wrap"><input class="form-control" type="text" name="personOtherDebt" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Total kreditt- og forbruksgjeld (kr)</label>
+											<div class="form-control-feedback person-other-debt-feedback"> </div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12" style="padding: 0 7px;">
+										<div class="group account-number-wrap"><input class="form-control" type="text" name="accountNumber" inputmode="numeric" pattern="[0-9]*" required=""><label class="mat-lbl">Kontonummer (for utbetaling av lånet)</label>
+											<div class="form-control-feedback account-number-feedback"></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12"><button class="btn btn-block btn-outline-warning btn-apply">Søk nå - Gratis!</button>
+										<div class="form-send-error"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<p class="text-center">Når jeg sammenligner godkjenner jeg også <a target="_blank" href="#" style="color: #333; text; text-decoration: underline;">brukeravtalen</a> og <a target="_blank" href="#" style="color: #333; text; text-decoration: underline;">personevernerklæringen</a> og bekrefter at jeg er norsk statsborger</p>
+										<p class="text-center small">* Renten er flytende og fastsettes individuelt. For ett annuitetslån på 100 000 kr med 9 års løpetid, nominell rente 9,50 % og 0 kr i etablerings-/termingebyr, blir den effektive renten 9,92 %. Totalkostnad: 149 141 kr. Månedskostnad: 1 381 kr fordelt på 108 nedbetalinger.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
